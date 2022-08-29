@@ -12,7 +12,6 @@ int? SecondNum(string str)
 
     if (str.Length < 3 || str.Length > 3)
     {
-        Console.WriteLine("Необходимо ввести трехзначное число");
         return null;
     }
     else
@@ -28,5 +27,12 @@ int? SecondNum(string str)
 
 Console.WriteLine("Введите трехзначное число:");
 string numStr = Console.ReadLine();
-int? secondNumber = SecondNum(numStr);
-Console.WriteLine(secondNumber);
+var secondNumber = SecondNum(numStr);
+if (secondNumber == null)
+{
+    Console.WriteLine("Необходимо ввести трехзначное число");
+}
+else
+{
+    Console.WriteLine(secondNumber);
+}
