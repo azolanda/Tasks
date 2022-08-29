@@ -1,8 +1,10 @@
 ﻿/*  Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
     на выходе показывает вторую цифру этого числа.  */
 
-void SecondNum(string str, int[] numArray)
+int? SecondNum(string str)
 {
+    int[] numArray = new int[3];
+
     if (str[0] == '-')
     {
         str = str.Substring(1);
@@ -11,6 +13,7 @@ void SecondNum(string str, int[] numArray)
     if (str.Length < 3 || str.Length > 3)
     {
         Console.WriteLine("Необходимо ввести трехзначное число");
+        return null;
     }
     else
     {
@@ -19,11 +22,11 @@ void SecondNum(string str, int[] numArray)
             numArray[i] = int.Parse(str[i].ToString());
         }
         int secondNum = numArray[1];
-        Console.WriteLine(secondNum);
+        return secondNum;
     }
 }
 
 Console.WriteLine("Введите трехзначное число:");
 string numStr = Console.ReadLine();
-int[] numArr = new int[3];
-SecondNum(numStr, numArr);
+int? secondNumber = SecondNum(numStr);
+Console.WriteLine(secondNumber);
