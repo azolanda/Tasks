@@ -26,8 +26,3 @@ string arrStr = Console.ReadLine();
 string[] arr = arrStr.Split(' ');
 
 PrintArray(arr);
-
-
-
-
-
