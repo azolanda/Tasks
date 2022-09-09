@@ -49,16 +49,11 @@ double Min(double[] arr)
 {
     double min = arr[0];
 
-    for (int i = 1; i < arr.Length - 1; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        for (int j = 0; j < arr.Length - i; j++)
+        if (min > arr[i])
         {
-            if (min > arr[i])
-            {
-                double temp = arr[i];
-                arr[i] = min;
-                min = temp;
-            }
+            min = arr[i];
         }
     }
 
@@ -69,16 +64,11 @@ double Max(double[] arr)
 {
     double max = arr[0];
 
-    for (int i = 1; i < arr.Length - 1; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        for (int j = 0; j < arr.Length - i; j++)
+        if (max < arr[i])
         {
-            if (max < arr[i])
-            {
-                double temp = arr[i];
-                arr[i] = max;
-                max = temp;
-            }
+            max = arr[i];
         }
     }
 
