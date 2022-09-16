@@ -33,7 +33,6 @@ void PrintArray(double[,] array)
         }
         Console.WriteLine();
     }
-
 }
 
 double[,] newArray = Create2DArray(3, 4, -9.9, 9.9);
