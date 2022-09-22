@@ -8,9 +8,9 @@
 int[] GetNums()
 {
     int[] nums = new int[2];
-    Console.WriteLine("Ведите натуральное число M: ");
+    Console.WriteLine("Введите натуральное число M: ");
     nums[0] = int.Parse(Console.ReadLine());
-    Console.WriteLine("Ведите натуральное число N, большее или равное M: ");
+    Console.WriteLine("Введите натуральное число N, большее или равное M: ");
     nums[1] = int.Parse(Console.ReadLine());
     return nums;
 }
