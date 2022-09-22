@@ -5,9 +5,23 @@
     M = 4; N = 8. -> "4, 5, 6, 7, 8"
 */
 
+int[] GetNums()
+{
+    int[] nums = new int[2];
+    Console.WriteLine("Ведите натуральное число M: ");
+    nums[0] = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ведите натуральное число N, большее или равное M: ");
+    nums[1] = int.Parse(Console.ReadLine());
+    return nums;
+}
+
 void PrintRecursiveNums(int m, int n)
 {
-    if (m == n)
+    if (m > n)
+    {
+        Console.WriteLine("Ошибка. Число N должно быть больше числа M.");
+    }
+    else if (m == n)
     {
         Console.WriteLine($"{m}");
     }
@@ -18,4 +32,5 @@ void PrintRecursiveNums(int m, int n)
     }
 }
 
-PrintRecursiveNums(4, 8);
+int[] numbers = GetNums();
+PrintRecursiveNums(numbers[0], numbers[1]);
